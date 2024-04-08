@@ -1,5 +1,5 @@
 // project.js - purpose and description here
-// Author: Your Name
+// Author: 
 // Date:
 
 // NOTE: This is how we might start a basic JavaaScript OOP project
@@ -7,28 +7,56 @@
 // Constants - User-servicable parts
 // In a longer project I like to put these in a separate file
 
-// define a class
-class MyProjectClass {
-  // constructor function
-  constructor(param1, param2) {
-    // set properties using 'this' keyword
-    this.property1 = param1;
-    this.property2 = param2;
-  }
-  
-  // define a method
-  myMethod() {
-    // code to run when method is called
-  }
-}
 
 function main() {
-  // create an instance of the class
-  let myInstance = new MyProjectClass("value1", "value2");
-
-  // call a method on the instance
-  myInstance.myMethod();
+  const fillers = {
+    adventurer: ["Cyberpunk", "Neon", "TechBot", "Starfarer", "Cosmic Voyager", "Spacer", "Synthwave", "Nebula Walker", "Galactic Nomad", "Quantum Sleuth", "Interstellar Agent", "Exo-Explorer", "SkyNet", "Orbital Guardian", "Binary"],
+    pre: ["Virtu", "Cryo", "Cyber", "Neo", "Astro", "Quantum"],
+    post: ["grid", "link", "net", "-on-the-go", "space", "stream", "tron", "sphere", "beam"],
+    people: ["cybernetic", "enhanced", "integrated", "wired", "neural", "augmented", "enhanced", "solar", "stellar", "lunar", "intergalactic"],
+    item: ["cyber-blade", "laser rifle", "data drive", "plasma shield", "nano-suit", "gravity boots", "quantum gloves", "neural implant", "energy sword", "pulse cannon"],
+    num: ["two", "three", "eleven", "so many", "too many", "an overwhelming amount of", "barely any", "an unspecified amount of", "a critical mass of"],
+    looty: ["glowing", "high-tech", "stellar", "rare", "exotic", "photon-infused", "holographic", "enchanted", "crystalized", "quantum-entangled"],
+    loots: ["credits", "data shards", "energy cells", "artifacts", "tech fragments", "star maps", "alien relics", "quantum particles", "nucleonic isotopes"],
+    baddies: ["cyber-zombies", "sentient AI", "space pirates", "nanobot swarms", "interstellar hackers", "neural parasites", "rogue drones", "cosmic anomalies", "viral entities"],
+    message: ["transmit", "broadcast", "communique", "send", "signal", "hail", "message", "alert", "transmission", "echo", "ping"],
+  };
+  
+  const template = `$adventurer, receive my $message!
+  
+  I have just returned from $pre$post where the $people inhabitants are in dire need. Their habitat has been infiltrated by $baddies. You must embark immediately, equipped with my $item, and assist them.
+  
+  Legend has it that the savior will be rewarded with $num $looty $loots. Surely this entices one of your caliber!
+  `;
+  
+  // STUDENTS: You don't need to edit code below this line.
+  
+  const slotPattern = /\$(\w+)/;
+  
+  function replacer(match, name) {
+    let options = fillers[name];
+    if (options) {
+      return options[Math.floor(Math.random() * options.length)];
+    } else {
+      return `<UNKNOWN:${name}>`;
+    }
+  }
+  
+  function generate() {
+    let story = template;
+    while (story.match(slotPattern)) {
+      story = story.replace(slotPattern, replacer);
+    }
+  
+    /* global box */
+    box.innerText = story;
+  }
+  
+  /* global clicker */
+  clicker.onclick = generate;
+  
+  generate();
+  
 }
 
-// let's get this party started - uncomment me
-//main();
+main();
