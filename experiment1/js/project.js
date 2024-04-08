@@ -20,6 +20,9 @@ function main() {
     loots: ["credits", "data shards", "energy cells", "artifacts", "tech fragments", "star maps", "alien relics", "quantum particles", "nucleonic isotopes"],
     baddies: ["cyber-zombies", "sentient AI", "space pirates", "nanobot swarms", "interstellar hackers", "neural parasites", "rogue drones", "cosmic anomalies", "viral entities"],
     message: ["transmit", "broadcast", "communique", "send", "signal", "hail", "message", "alert", "transmission", "echo", "ping"],
+    location: ["the cyberverse", "the neon galaxy", "the quantum realm", "the stellar expanse", "the celestial sphere", "the warp zone", "the interstellar nexus", "the cybernetic network", "the cosmic frontier"],
+    mission: ["rescue operation", "stealth mission", "reconnaissance mission", "infiltration mission", "data retrieval mission", "sabotage mission", "escort mission", "defense mission", "survival mission"],
+    reward: ["galactic renown", "cybernetic upgrades", "starship upgrades", "quantum enhancements", "stellar credits", "ancient knowledge", "rare artifacts", "cosmic blessings", "interstellar fame"],
   };
   
   const template = `$adventurer, receive my $message!
@@ -27,6 +30,9 @@ function main() {
   I have just returned from $pre$post where the $people inhabitants are in dire need. Their habitat has been infiltrated by $baddies. You must embark immediately, equipped with my $item, and assist them.
   
   Legend has it that the savior will be rewarded with $num $looty $loots. Surely this entices one of your caliber!
+  
+  Your mission, should you choose to accept it, is a $mission in $location. The stakes are high, but the rewards are great - you may earn $reward and everlasting glory!
+  
   `;
   
   // STUDENTS: You don't need to edit code below this line.
@@ -56,6 +62,7 @@ function main() {
   clicker.onclick = generate;
   
   generate();
+  
   
 }
 
