@@ -32,7 +32,7 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 2 - Generative Landscape</h1>
 
 			<div class="minor-section">
 				<div id="canvas-container">
@@ -44,18 +44,24 @@
 			</div>
 
 			<div class="minor-section">
+                <div class="image-wrapper">
+                    <img src="img/snowimage.jpg">
+                </div>
+			</div>
+
+			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>I was trying to capture the image specifically the general shapes in the image. For example the shapes of the trees and the shapes of the mountain.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>I used perlin noise to generate a randomized continious line representing the terrain height. The function calculates y coordinate points along the terrain line using perlin noise and puts them in an array for later use. There are frequency and amplitude parameters used to control the scale and roughness of the terrain. I also used random generation for trees and clouds so that they are placed randomy. The rendering is done in the drawScene() function. In this function I drew some of the elements such as the gradient background, shape of the terrain, clouds and trees. The trees are made using triangles and rectangles.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>All in all it was a fun project to work on. I worked on it alone so I was responsible for all of the code though i did have some help from examples and chatgpt on perlin noise generation.</p>
 			</div>
 
 		</section>
