@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment X - Subject/Topic</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 2 - Generative Landscape</h1>
+
+			<div class="minor-section">
+				<div id="canvas-container">
+					<!-- canvas will be added here -->
+				</div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+                <div class="image-wrapper">
+                    <img src="img/snowimage.jpg">
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>I was trying to capture the image specifically the general shapes in the image. For example the shapes of the trees and the shapes of the mountain.</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>I used perlin noise to generate a randomized continious line representing the terrain height. The function calculates y coordinate points along the terrain line using perlin noise and puts them in an array for later use. There are frequency and amplitude parameters used to control the scale and roughness of the terrain. I also used random generation for trees and clouds so that they are placed randomy. The rendering is done in the drawScene() function. In this function I drew some of the elements such as the gradient background, shape of the terrain, clouds and trees. The trees are made using triangles and rectangles.</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>All in all it was a fun project to work on. I worked on it alone so I was responsible for all of the code though i did have some help from examples and chatgpt on perlin noise generation.</p>
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 04: Infinite Worlds</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <!-- <script type="text/javascript" src="../js/site.js" DEFER></script> -->
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<script src="./js/xxhash.min.js" defer></script>
+	<!-- Use me for a p5.js project -->
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 04: Infinite Worlds</h1>
+
+			<div class="minor-section">
+					<div id="canvas-container1" class="p5Canvas">
+						<!-- canvas will be added here -->
+					</div>
+					<div id="canvas-container2" class="p5Canvas">
+						<!-- canvas will be added here -->
+					</div>
+					<div id="canvas-container3" class="p5Canvas">
+						<!-- canvas will be added here -->
+					</div>
+				</div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>In this experiment I created three different infinite worlds based off of a base code.</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>All three sketches use the same global seed. The location of the camera is also global. The first inifnite world is based off of archipeligos. I tried to recreate the islands with sand and varrying shades of grass aswell as the depth of the water. There is also a function that resembles a day->sunset cycle using milis and adjusting the R values of the colors. The second infinite world is a world based off of the nether biome in minecraft. The Lava/orange blocks in this world glow over time using Milis and adjusting their red value. For the final inifnite world I tried to recreate the sand biome in Minecraft. The sand biome features sand gravel and lava. It also features a day night cycle.
+
+				</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>I enjoyed recreating worlds for minecraft specifically since minecraft is a voxel game, the look I achieved looked very similar to minecrafts biomes. </p> 
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
