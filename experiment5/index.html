@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,37 +33,53 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment 2 - Generative Landscape</h1>
+			<h1>Experiment 5 - Evolutionary Impressions</h1>
+			<div class="image-container">
+				<p id="original"></p>
+				<p class="caption"></p>
+				<p id="active"></p>
+				<p id="best"></p>
+			</div>
+            <select id="dropper"></select>
+            <button id="restart">restart</button>
+            <p>
+			Mutation rate (<span id="rate"></span>%):<br /><input
+			id="slider"
+			type="range"
+			min="1"
+			max="100"
+			value="100"
+			/>
+            </p>
+            <p id="active"></p>
+            <p>Active score: <span id="activeScore"></span></p>
+            <p>Exploration rate: <span id="fpsCounter"></span> fps</p>
+            <p id="best"></p>
+            <p>Best score: <span id="bestScore"></span></p>
+            <p id="memory" data-max-items="16"></p>
 
+			
 			<div class="minor-section">
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
 				</div>
-                <div class="fullscreen-box">
-                    <button id="fullscreen">Fullscreen</button>
-                </div>
-			</div>
-
-			<div class="minor-section">
-                <div class="image-wrapper">
-                    <img src="img/snowimage.jpg">
-                </div>
 			</div>
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>I was trying to capture the image specifically the general shapes in the image. For example the shapes of the trees and the shapes of the mountain.</p>
+				<p>A generator that directly reads inspiring images, renders parameterized images, and adjusts its own designs to optimize an evaluation score.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>I used perlin noise to generate a randomized continious line representing the terrain height. The function calculates y coordinate points along the terrain line using perlin noise and puts them in an array for later use. There are frequency and amplitude parameters used to control the scale and roughness of the terrain. I also used random generation for trees and clouds so that they are placed randomy. The rendering is done in the drawScene() function. In this function I drew some of the elements such as the gradient background, shape of the terrain, clouds and trees. The trees are made using triangles and rectangles.</p>
+				<p>Used randomization for various things such as size, placement, and opacity. Used interpolation to calculate intermediate values between min and maxes. modified the opacity of shapes inorder to allow blending of color and shape. Used normalization and constraining values to keep it within min max/width height. Case statements/states for changing between ellipticals and rectangle shapes. </p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>All in all it was a fun project to work on. I worked on it alone so I was responsible for all of the code though i did have some help from examples and chatgpt on perlin noise generation.</p>
+				<p>It was interesting to mess around and discover pictures that the generator is easily able to represent better versus those that are more difficult.</p>
 			</div>
+
 
 		</section>
 		<nav id="links" class="minor-section">
